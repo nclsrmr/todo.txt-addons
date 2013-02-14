@@ -16,7 +16,7 @@ function usage {
 	echo "    Uses the project of the task as the Hamster category."
 	echo "    <HAMSTER OPTIONS> are hamster start options, such as time started."
 	echo "    Details for these options can be found in hamster --help"
-    echo ""
+        echo ""
 	echo "    Examples:"
 	echo "      $ $TODO_SH $(basename $0) 42 "
 	echo "    Starts task 42 in hamster"
