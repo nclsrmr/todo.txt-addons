@@ -66,6 +66,12 @@ if [[ "$line" =~ t: ]]; then
 line=$(echo "$line" | sed 's/t:\([0-9]\{2,4\}[^A-Za-z0-9]\)\{2\}[0-9]\{2,4\}//g') 
 fi
 
+# cut off time strings starting with due:
+
+if [[ "$line" =~ due: ]]; then
+line=$(echo "$line" | sed 's/due:\([0-9]\{2,4\}[^A-Za-z0-9]\)\{2\}[0-9]\{2,4\}//g') 
+fi
+
 # start the task in hamster
 
 hamster start "$line$project" $param
