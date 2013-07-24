@@ -78,7 +78,7 @@ hamster-cli start "$line$project" $param
 
 #check that hamster has started the task
 
-hamster-cli current
+hamster-cli list | tail -1
 
 
 
