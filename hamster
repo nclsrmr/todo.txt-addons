@@ -74,11 +74,11 @@ fi
 
 # start the task in hamster
 
-hamster start "$line$project" $param
+hamster-cli start "$line$project" $param
 
 #check that hamster has started the task
 
-hamster current
+hamster-cli current
 
 
 
