@@ -1,4 +1,8 @@
-todo.txt-addons
-===============
+# todo.txt hamster add-on action
 
-Addons for todo.txt
+## Usage
+
+```
+todo.sh hamster 42
+```
+Starts registering task #42 in Hamster Time Tracker.
