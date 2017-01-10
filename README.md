@@ -12,4 +12,5 @@ Starts registering task #42 in Hamster Time Tracker.
 ### 1.0
 
 Cut off the creation date
+
 Prints the task before exiting
