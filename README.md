@@ -20,6 +20,10 @@ Starts registering task #42 in Hamster Time Tracker.
 
 Handle hamster tags
 
+#### v1.2 (11/01/2017)
+
+Replaces "," with " " in task
+
 ## addpri action
 
 ### Usage
