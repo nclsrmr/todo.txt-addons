@@ -1,4 +1,13 @@
 #!/bin/bash
+###############################################################################
+#
+# Forked from https://github.com/jorgeegomez/todo.txt-addons
+#
+# v1.0 (10/01/2017): Cut off the creation date
+#                              Prints the task before exiting
+# v1.1 (11/01/2017): Handle hamster tags
+#
+###############################################################################
 
 action=$1
 shift
@@ -44,10 +53,13 @@ if [[ "$line" =~ ^\([A-Z]\) ]]; then
 line=$(echo "$line" | cut -f2- -d ' ') 
 fi
 
-# cut off the contexts
+# cut off the contexts but retain them as tags
 
+context=""
 if [[ "$line" =~ @ ]]; then
+context=$(echo "$line" | grep -o '[^ ]*@[^ ]\+')
 line=$(echo "$line" | sed -r 's/@\w*\s*//g') 
+tag=$(echo $context | sed -r 's/@/\#/g')
 fi
 
 # cut off the creation date
@@ -78,7 +90,7 @@ fi
 
 # start the task in hamster
 
-hamster-cli start "$line$project" $param
+hamster-cli start "$line$project, $tag" $param
 
 #check that hamster has started the task
 

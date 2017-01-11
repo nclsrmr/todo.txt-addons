@@ -16,6 +16,10 @@ Starts registering task #42 in Hamster Time Tracker.
 - Cut off the creation date
 - Prints the task before exiting
 
+#### v1.1 (11/01/2017)
+
+Handle hamster tags
+
 ## addpri action
 
 ### Usage
