@@ -6,6 +6,7 @@
 # v1.0 (10/01/2017): Cut off the creation date
 #                              Prints the task before exiting
 # v1.1 (11/01/2017): Handle hamster tags
+# v1.2 (11/01/2017): Replaces "," with " " in task
 #
 ###############################################################################
 
@@ -46,6 +47,9 @@ fi
 # fetch the task
 
 line=$(sed "$item!d" "$TODO_FILE")
+
+# Replace "," with " "
+line=$(echo "$line" | sed -r 's/,//g')
 
 # cut off the priority
 
